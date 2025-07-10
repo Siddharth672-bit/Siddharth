@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alert Message</title>
+</head>
+<body>
+
+
+<script>
+
+
+function dividenumber( ){
+try {
+let a = Number(prompt("Enter first number:"));
+let b = Number(prompt("Enter second number:"));
+if (b === 0) {
+throw new Error("Division by zero is not allowed.");
+}    
+let result = a / b;
+document.write("The final output is: " + result);
+} catch (error) {
+document.write("Error: " + error.message);
+}
+}
+dividenumber();
+</script>
+</body>
+</html>

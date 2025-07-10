@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>fetch</title></head>
+<body>
+<h2>User Info:</h2>
+  <div id="username">Loading...</div>
+<script>
+fetch('https://randomuser.me/api/')
+.then(response => response.json())
+      .then(data => {
+const user = data.results[0];
+const name =`${user.name.first} ${user.name.last}`;
+document.getElementById('username').innerText = name;
+})  
+.catch(error => {
+console.log('Error:', error);
+});
+ </script>
+</body>
+</html>

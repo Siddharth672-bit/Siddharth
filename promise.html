@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="check()">Check Number</button>
+<p id="result"></p>
+
+<script>
+function check() {
+let number = 54;
+let promise = new Promise((resolve,reject) => {
+if (number > 10) {
+resolve("Number is greater than 10");
+} else {
+reject("Number is 10 or less");
+}
+});
+
+promise
+.then(msg => document.getElementById("result").textContent = msg)
+.catch(err => document.getElementById("result").textContent = err);
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Async Await</title>
+</head>
+<body>
+  <h1>User Info</h1>
+  <button onclick="getUser()">Get User</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function getUser() {
+      const output = document.getElementById('output');
+      output.textContent = 'Loading...';
+
+      try {
+
+        const user = await response.json();
+        output.textContent = JSON.stringify(user, null, 2);
+      } catch (error) {
+        output.textContent = `Error: ${error.message}`;
+      }
+    }
+  </script>
+</body>
+</html>

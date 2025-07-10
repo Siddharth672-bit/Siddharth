@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Change</title>
+  <style>
+    #myButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #myImage {
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="myButton">Jai Shree Ram🚩</button>
+  <br>
+  <img id="myImage" src="8.jpg" alt="Image">
+
+  <script>
+    const button = document.getElementById('myButton');
+    const image = document.getElementById('myImage');
+    button.addEventListener('mouseover', () => {
+      image.src = '7.jpg';
+    });
+
+    button.addEventListener('mouseout', () => {
+      image.src = '9.jpg';
+    });
+  </script>
+
+</body>
+</html>
